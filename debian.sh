@@ -5,6 +5,8 @@ chsh -s /bin/zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+wget https://raw.githubusercontent.com/thankforcat/newlinux/main/.p10k.zsh -O ~/.p10k.zsh
+
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 sed -i '/^ZSH_THEME=/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
@@ -13,6 +15,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 sed -i "s/plugins=(git)/plugins=(git zsh-autosuggestions)/" ~/.zshrc
 
-wget https://raw.githubusercontent.com/thankforcat/newlinux/main/.p10k.zsh /$home/.p10k.zsh
+echo "[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> ~/.zshrc
 
 source ~/.zshrc
