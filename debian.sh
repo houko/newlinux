@@ -10,7 +10,7 @@ sed -i '/^ZSH_THEME=/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-sed -i '' '/plugins=(/a \zsh-autosuggestions' ~/.zshrc
+sed -i "s/plugins=(git)/plugins=(git zsh-autosuggestions)/" ~/.zshrc
 
 wget https://raw.githubusercontent.com/thankforcat/newlinux/main/.p10k.zsh /$home/.p10k.zsh
 
