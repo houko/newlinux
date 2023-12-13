@@ -1,6 +1,7 @@
 apt -y update && apt -y install curl wget git zsh
 
 apt-get install -y curl git zsh
+chsh -s /bin/zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
